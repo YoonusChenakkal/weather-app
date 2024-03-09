@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'model_';
 
 class forecast_bar extends StatelessWidget {
-  const forecast_bar({super.key});
+  Weather? weatherdata;
+   forecast_bar({super.key,this.weatherdata});
 
   @override
   Widget build(BuildContext context) {
     return Positioned(
         bottom: 0,
         child: Container(
-          height: 250,
+         height: MediaQuery.of(context).size.height/4.25,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
               color: Colors.white,
@@ -36,7 +38,7 @@ class forecast_bar extends StatelessWidget {
                   'Weather Today',
                   style: GoogleFonts.archivo(
                       textStyle:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
+                          TextStyle(fontSize: 19, fontWeight: FontWeight.w700)),
 
                   // TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
                 ),
@@ -51,7 +53,7 @@ class forecast_bar extends StatelessWidget {
                       ),
                       Icon(
                         Icons.sunny_snowing,
-                        size: 58,
+                        size: 50,
                         color: Color.fromARGB(255, 255, 209, 2),
                       ),
                       SizedBox(
@@ -71,9 +73,9 @@ class forecast_bar extends StatelessWidget {
                         '20°',
                         style: GoogleFonts.mcLaren(
                             textStyle: TextStyle(
-                                fontSize: 38,
-                                letterSpacing: -3,
-                                fontWeight: FontWeight.w400)),
+                          fontSize: 33,
+                          letterSpacing: -3,
+                        )),
                       )
                     ],
                   ),
@@ -84,7 +86,7 @@ class forecast_bar extends StatelessWidget {
                       ),
                       Icon(
                         Icons.sunny_snowing,
-                        size: 58,
+                        size: 50,
                         color: Color.fromARGB(255, 255, 209, 2),
                       ),
                       SizedBox(
@@ -104,9 +106,9 @@ class forecast_bar extends StatelessWidget {
                         '20°',
                         style: GoogleFonts.mcLaren(
                             textStyle: TextStyle(
-                                fontSize: 38,
-                                letterSpacing: -3,
-                                fontWeight: FontWeight.w400)),
+                          fontSize: 33,
+                          letterSpacing: -3,
+                        )),
                       )
                     ],
                   ),
@@ -117,7 +119,7 @@ class forecast_bar extends StatelessWidget {
                       ),
                       Icon(
                         Icons.sunny_snowing,
-                        size: 58,
+                        size: 50,
                         color: Color.fromARGB(255, 255, 209, 2),
                       ),
                       SizedBox(
@@ -137,9 +139,9 @@ class forecast_bar extends StatelessWidget {
                         '20°',
                         style: GoogleFonts.mcLaren(
                             textStyle: TextStyle(
-                                fontSize: 38,
-                                letterSpacing: -3,
-                                fontWeight: FontWeight.w400)),
+                          fontSize: 33,
+                          letterSpacing: -3,
+                        )),
                       )
                     ],
                   ),
@@ -150,7 +152,7 @@ class forecast_bar extends StatelessWidget {
                       ),
                       Icon(
                         Icons.sunny_snowing,
-                        size: 58,
+                        size: 50,
                         color: Color.fromARGB(255, 255, 209, 2),
                       ),
                       SizedBox(
@@ -170,9 +172,9 @@ class forecast_bar extends StatelessWidget {
                         '20°',
                         style: GoogleFonts.mcLaren(
                             textStyle: TextStyle(
-                                fontSize: 38,
-                                letterSpacing: -3,
-                                fontWeight: FontWeight.w400)),
+                          fontSize: 33,
+                          letterSpacing: -3,
+                        )),
                       )
                     ],
                   ),
