@@ -38,7 +38,7 @@ class _MainAppState extends State<MainApp> {
     } else {
       print('Failed to fetch data. Status code: ${response.statusCode}');
     }
-    
+   
   }
 
   @override
@@ -60,7 +60,7 @@ class _MainAppState extends State<MainApp> {
             height: MediaQuery.of(context).size.height/1.24,
             width: MediaQuery.of(context).size.width,
             color: const Color.fromARGB(255, 100, 100, 100),
-            child: Image.network(fit: BoxFit.fitHeight,'https://static.vecteezy.com/system/resources/previews/000/201/488/original/vector-blue-landscape-illustration.jpg'),
+            child: Image.asset(fit: BoxFit.fitHeight,'assets/blue-illustration.jpg'),
             
  ),
           forecast_bar(weatherdata: currentWeather),

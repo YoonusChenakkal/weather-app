@@ -14,6 +14,7 @@ class upper_section extends StatefulWidget {
 }
 
 class _upper_sectionState extends State<upper_section> {
+
   @override
   void initState() {
     // TODO: implement initState
@@ -38,6 +39,7 @@ class _upper_sectionState extends State<upper_section> {
   updateWeather() {
     setState(() {
       widget.weatherdata;
+     
     });
   }
 
@@ -75,7 +77,7 @@ class _upper_sectionState extends State<upper_section> {
                       ],
                     ),
                     Text(fo_date + ' ' + fo_time,
-                        //'Today,Oct' 18 5:10',
+                        //example  'Today,Oct' 18 5:10',
                         style: GoogleFonts.puritan(
                           textStyle: TextStyle(
                               color: Colors.white,
@@ -93,7 +95,7 @@ class _upper_sectionState extends State<upper_section> {
             ),
           ),
           Container(
-              height: MediaQuery.of(context).size.height / 4.5,
+              height: MediaQuery.of(context).size.height / 4.1,
               width: MediaQuery.of(context).size.width,
               // color: Colors.blue,
               child: Row(
@@ -101,25 +103,39 @@ class _upper_sectionState extends State<upper_section> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 16.0, top: 0),
-                    child: widget.weatherdata == null
-                        ? SizedBox()
-                        : Text(
-                            widget.weatherdata!.current.tempC
-                                    .toInt()
-                                    .toString() +
-                                '°',
-                            style: GoogleFonts.rocknRollOne(
-                                textStyle: TextStyle(
-                              letterSpacing: -8,
-                              color: Colors.white,
-                              fontSize: 100,
-                            ))),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        widget.weatherdata == null
+                            ? SizedBox()
+                            : Text(
+                                widget.weatherdata!.current.tempC
+                                        .toInt()
+                                        .toString() +
+                                    '°',
+                                style: GoogleFonts.rocknRollOne(
+                                    textStyle: TextStyle(
+                                  letterSpacing: -8,
+                                  color: Colors.white,
+                                  fontSize: 100,
+                                ))),
+                        Row(
+                          children: [
+                           
+                            widget.weatherdata == null
+                            ? SizedBox()
+                            : Text(widget.weatherdata!.current.condition.text),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(right: 40, top: 12),
                     child: Column(
                       children: [
-                        Lottie.network(height: 100,
+                        Lottie.network(
+                            height: 100,
                             'https://lottie.host/db32edef-17b9-4ad6-bbc2-b2c76dc6ee6c/WcBsOq0Bwx.json'),
                         //Icons.wb_sunny_outlined,color: Colors.white,
 
